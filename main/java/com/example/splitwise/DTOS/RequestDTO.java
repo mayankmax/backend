@@ -10,6 +10,6 @@ import lombok.Setter;
 public class RequestDTO {
     private String userName;
     private String userEmail;
-    private int userPhone;
+    private String userPhone;
     private String userPassword;
 }

@@ -21,7 +21,7 @@ public class Users extends BaseModal {
 
     @Size(min = 10 ,max = 10)
     @NotEmpty
-    private int userPhone;
+    private String userPhone;
     @Size(min = 8 ,max = 20)
     @NotEmpty
     private String userPassword;
