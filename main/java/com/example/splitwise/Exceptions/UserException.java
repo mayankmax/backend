@@ -1,11 +1,9 @@
 package com.example.splitwise.Exceptions;
 
 public class UserException extends Exception {
-    private String errorMessage;
 
     public UserException(String errorMessage) {
         super(errorMessage);
-        this.errorMessage = errorMessage;
     }
 
     public static class InvalidEmailException extends UserException {

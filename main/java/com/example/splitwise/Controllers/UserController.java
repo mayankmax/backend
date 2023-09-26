@@ -46,8 +46,26 @@ public class UserController {
 
 
     @GetMapping("/login")
-    public ResponseDTO login(@Valid @RequestBody RequestDTO requestDTO){
-        return null;
+    public ResponseEntity<ResponseDTO> login(@Valid @RequestBody RequestDTO requestDTO){
+
+        String email = requestDTO.getUserEmail();
+        String password = requestDTO.getUserPassword();
+        ResponseDTO responseDTO = new ResponseDTO();
+
+        String result = userServices.login(email,password);
+
+        if (result.toLowerCase().contains("verified")) {
+            responseDTO.setMessage("Login is Successful");
+            responseDTO.setStatus(result);
+        } else {
+            responseDTO.setMessage("Failure in Login: " + result);
+            responseDTO.setStatus("Failure");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseDTO);
+        }
+
+        return ResponseEntity.ok(responseDTO);
+
+
     }
 
 
