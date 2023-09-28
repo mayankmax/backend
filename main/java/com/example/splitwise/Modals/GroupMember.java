@@ -1,15 +1,17 @@
 package com.example.splitwise.Modals;
 
 import com.example.splitwise.Modals.enums.Role;
+import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class GroupMember {
+@Entity
+public class GroupMember extends BaseModal {
 
 
-    private Users user;
-    private Groups group;
+    private int user;
+    private int group;
     private Role role;
 }

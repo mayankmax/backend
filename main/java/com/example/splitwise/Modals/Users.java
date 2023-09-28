@@ -1,5 +1,6 @@
 package com.example.splitwise.Modals;
 
+import jakarta.persistence.Entity;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -10,6 +11,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@Entity
 public class Users extends BaseModal {
     @Size(min = 3 ,max = 20)
     @NotEmpty

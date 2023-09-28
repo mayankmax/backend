@@ -1,15 +1,16 @@
 package com.example.splitwise.Modals;
 
 
+import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-
+@Entity
 public class ExpensePaidBy extends BaseModal{
 
-    private Users paidByUser;
+    private int paidByUser;
     private int amountPaid;
-    private Expenses paidByExpenses;
+    private int paidByExpenses;
 }
