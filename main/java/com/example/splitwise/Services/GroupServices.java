@@ -1,8 +1,7 @@
 package com.example.splitwise.Services;
 
-import com.example.splitwise.DTOS.GroupRequestDTO;
 import com.example.splitwise.Exceptions.GroupException;
-import com.example.splitwise.Modals.Groups;
+import com.example.splitwise.Modals.splitwise_group;
 import com.example.splitwise.Modals.Users;
 import com.example.splitwise.Utils.GroupConstraints;
 import org.springframework.stereotype.Service;
@@ -33,7 +32,7 @@ public class GroupServices {
             if(groupConstraints.isValidGroupName(groupCreatedBy.getUserName()))
                 throw new GroupException.InvalidGroupNameException("Name is not valid, try again");
 
-            Groups group = new Groups(name,1, new Date());
+            splitwise_group group = new splitwise_group(name,1, new Date());
 
 
             //before returning we should even add RBAC to user

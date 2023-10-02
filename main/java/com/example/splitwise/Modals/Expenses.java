@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-import java.util.Date;
 
 @Entity // This annotation marks the class as a JPA entity
 @Getter
@@ -14,8 +13,5 @@ public class Expenses extends BaseModal {
 
     private int amount;
     private String expenseName;
-
-
-
     private int userId;
 }

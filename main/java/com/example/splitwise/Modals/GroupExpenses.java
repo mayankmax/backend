@@ -1,7 +1,5 @@
 package com.example.splitwise.Modals;
 
-//As Expense and Group are M:M mapping so we have created a mapping class
-
 import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class GroupExpenses extends  BaseModal{
-    private int group;
+public class GroupExpenses extends BaseModal {
+    private int groupsId;
     private int expenseId;
 }

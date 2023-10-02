@@ -12,6 +12,7 @@ public class GroupMember extends BaseModal {
 
 
     private int user;
-    private int group;
+    private int groupsId;
     private Role role;
+
 }

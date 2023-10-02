@@ -11,17 +11,17 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-public class Groups extends BaseModal{
+public class splitwise_group extends BaseModal{
 
     @Size(min = 3 ,max = 20)
     @NotEmpty
-    private String groupName;
-    private int admin;
+    private String groupsName;
+    private int adminId;
    // private Date createdAt;
 
-    public Groups(String groupName, int admin, Date createdAt) {
-        this.groupName = groupName;
-        this.admin = admin;
+    public splitwise_group(String groupsName, int adminId, Date createdAt) {
+        this.groupsName = groupsName;
+        this.adminId = adminId;
         //this.createdAt = createdAt;
     }
 }

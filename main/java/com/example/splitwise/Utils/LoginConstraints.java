@@ -34,8 +34,8 @@ public class LoginConstraints {
     }
 
 
-    public boolean login(String email, String password) {
-        if (mp.containsKey(email) && mp.get(email).equals(password)) {
+    public boolean login(String sharedPassword, String password) {
+        if (sharedPassword.equals(password)) {
             return true;
         }
         return false;
